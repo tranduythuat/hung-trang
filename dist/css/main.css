@@ -821,7 +821,7 @@ section {
   align-items: center;
   width: 100%;
   perspective: 1000px;
-  padding: 5% 0 10%;
+  padding: 20% 0 20%;
 }
 .dresscode .content h2 {
   font-size: 44px;
@@ -841,7 +841,7 @@ section {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: 60%;
+  width: 50%;
   margin-top: 2%;
 }
 .dresscode .content .colors-grid .item {
@@ -1291,8 +1291,8 @@ section {
 }
 .rsvp .button-group {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 10%;
+  margin-bottom: 3%;
+  gap: 5%;
 }
 .rsvp .label-confirm {
   font-size: 12px;
