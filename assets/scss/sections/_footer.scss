@@ -1,0 +1,140 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.footer {
+    width: 100%;
+
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10%;
+        aspect-ratio: 500 / 754;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(71, 48, 14, 0.246),
+                    rgba(71, 48, 14, 0.313)),
+                url('../../assets/images/end_couple.webp') no-repeat 45% 100% /120%;
+            filter: blur(6px);
+            z-index: 0;
+            transform: scale(1.1);
+        }
+
+        .logo {
+            width: 100%;
+            margin-bottom: 10%;
+
+            img {
+                width: 142px;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+        .qr {
+            color: white;
+            @include flex-center;
+            flex-direction: column;
+
+            p {
+                text-transform: uppercase;
+            }
+
+            .qr-box {
+                padding: 5%;
+                display: flex;
+                justify-content: center;
+                gap: 10%;
+                width: 100%;
+
+                .column {
+                    @include flex-center;
+                    flex-direction: column;
+
+                    img {
+                        display: block;
+                        max-width: 148px;
+                        width: 100%;
+                        aspect-ratio: 1;
+                        background-color: $secondary-color;
+                        margin: 5% 0 2%;
+                        border-radius: 5px;
+                    }
+
+                    .qr-info {
+                        font-size: 14px;
+                        margin-bottom: 5%;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+
+        }
+
+        p.thanks {
+            padding: 0 8%;
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        p.credits {
+            font-family: "UVNKeChuyen3", sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            padding: 3% 0 10%;
+        }
+
+        p.text-end {
+            text-transform: uppercase;
+            font-size: 10px;
+            margin-bottom: 3%;
+        }
+
+        @media (max-width: 500px) {
+            .logo {
+                img {
+                    width: calc((142 / 500) * 100vw);
+                }
+            }
+
+            .qr {
+                .qr-box {
+                    .column {
+                        img {
+                            max-width: calc((148 / 500) * 100vw);
+                            border-radius: calc((5 / 500) * 100vw);
+                        }
+
+                        .qr-info {
+                            font-size: calc((14 / 500) * 100vw);
+                            letter-spacing: calc((1 / 500) * 100vw);
+                        }
+                    }
+                }
+
+            }
+
+            p.credits {
+                font-size: calc((20 / 500) * 100vw);
+            }
+
+            p.text-end {
+                font-size: calc((10 / 500) * 100vw);
+            }
+        }
+    }
+
+
+
+}
