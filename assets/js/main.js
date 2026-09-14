@@ -417,7 +417,7 @@
         {
           opacity: 0,
           y: 60,
-          duration: 1,
+          duration: 0.5,
           ease: "power2.out"
         },
         `-=1.2`
@@ -431,7 +431,7 @@
             scale: 0,
             rotation: -120,
             opacity: 0,
-            duration: 1.5,
+            duration: 1.2,
             ease: "back.out(1.6)"
           },
           "<0.2"
@@ -445,7 +445,7 @@
           {
             opacity: 0,
             x: -80,
-            duration: 1.5,
+            duration: 1.2,
             ease: "power2.out"
           },
           "<0.4"
